@@ -1,3 +1,11 @@
+// use this to authenticate
+const { MessagingResponse } = require('twilio').twiml;
+const accountSid = AccountSID;
+const authToken = authToken;
+const client = require('twilio')(accountSid, authToken);
+
+
+
 router.post('/sendwhatsapptoall', (req, res) => {
     const link= req.body.link;
     const message = req.body.message;
